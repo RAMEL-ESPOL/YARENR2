@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<robot name="yaren" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <link name="base_footprint"/>
+    
+    <link name="base_link">
+        <inertial>
+          <origin xyz="-0.0111941484552959 -0.0368458795873965 0.215654266051241" rpy="0 0 0" />
+          <mass value="1.36786443462294" />
+          <inertia
+            ixx="0.00319634955740371"
+            ixy="-1.60882455550443E-08"
+            ixz="1.653324392476E-08"
+            iyy="0.00601731472918889"
+            iyz="4.74472482698139E-06"
+            izz="0.00319515652843736" />
+        </inertial>
+    
+        <visual>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+            <mesh filename="package://yaren_description/meshes/base_link.STL" />
+          </geometry>
+          <material name="">
+            <color
+              rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          </material>
+        </visual>
+    
+        <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+            <mesh filename="package://yaren_description/meshes/base_link.STL" />
+          </geometry>
+        </collision>
+    </link>
+
+    <joint name="base_joint" type="fixed">
+        <parent link="base_footprint"/>
+        <child link="base_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="0 0 0"/>
+    </joint>
+
+    <link name="Link_1">
+        <inertial>
+          <origin xyz="-0.0005406 0.03067 1.1225E-05" rpy="0 0 0" />
+          <mass value="0.2613" />
+          <inertia
+            ixx="0.00014283"
+            ixy="-8.1832E-07"
+            ixz="-7.2665E-08"
+            iyy="0.0002383"
+            iyz="2.7932E-08"
+            izz="0.00019886" />
+        </inertial>
+    
+        <visual>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+            <mesh filename="package://yaren_description/meshes/Link_1.STL" />
+          </geometry>
+          <material name="">
+            <color rgba="0.79216 0.81961 0.93333 1" />
+          </material>
+        </visual>
+    
+        <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+            <mesh filename="package://yaren_description/meshes/Link_1.STL" />
+          </geometry>
+        </collision>
+    </link>
+
+    <joint name="Joint_1" type="revolute">
+        <origin xyz="-0.011194 -0.21508 0.020523" rpy="1.5708 0 1.5708" />
+        <parent link="base_link" />
+        <child link="Link_1" />
+        <axis xyz="0 1 0" />
+        <limit
+          lower="-0.7853"
+          upper="0.7853"
+          effort="300"
+          velocity="3" />
+    </joint>
+    
+</robot>
