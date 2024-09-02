@@ -2,8 +2,9 @@ ROS 2- HUMBLE
 
 Al iniciar el proyecto ejecutar los siguientes comandos en el workspace:
 
+´´´bash
 colcon build
-
+´´´
 source install/setup.bash 
 
 
