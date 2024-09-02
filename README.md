@@ -1,5 +1,26 @@
 ## ROS 2- HUMBLE
 
+## Clonar el repositorio, rama master:
+```bash
+git clone -b master https://github.com/RAMEL-ESPOL/YARENR2.git
+```
+## PASOS PREVIOS (EN CASO DE ERROR):
+```bash
+sudo apt-get install ros-humble-gazebo-ros-pkgs
+```
+Revisar los permisos y dependencias:
+```bash
+sudo apt-get install libgazebo11-dev
+```
+Actualizar e instalar dependencias faltantes:
+```bash
+sudo apt-get update
+```
+```bash
+sudo apt-get upgrade
+```
+
+
 ## Al iniciar el proyecto ejecutar los siguientes comandos en su workspace:
 
 ```bash
@@ -18,6 +39,8 @@ ros2 launch yaren_description yaren_gazebo.launch.py
 ```bash
 ros2 launch yaren_description yaren_description.launch.py
  ```
+
+Para solucionar warning- Poner en Fixed Frame: base_link
 
 ## MOVIMIENTOS predefinidos YAREN en Rviz:
 
