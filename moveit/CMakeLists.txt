@@ -38,8 +38,9 @@ install(TARGETS
 install(
   DIRECTORY config launch urdf
   DESTINATION share/${PROJECT_NAME}/
-  FILES_MATCHING PATTERN "*.yaml" PATTERN "*.srdf" PATTERN "*.xacro" PATTERN "*.urdf"
+  FILES_MATCHING PATTERN "*.yaml" PATTERN "*.srdf" PATTERN "*.xacro" PATTERN "*.urdf" PATTERN "*.launch.py"
 )
+
 
 # Declarar que este proyecto es un paquete de ament
 ament_package()
