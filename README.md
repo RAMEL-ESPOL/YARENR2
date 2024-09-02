@@ -40,7 +40,7 @@ ros2 launch yaren_description yaren_gazebo.launch.py
 ros2 launch yaren_description yaren_description.launch.py
  ```
 
-Para solucionar warning- Poner en Fixed Frame: base_link
+Para solucionar warning- Poner en Fixed Frame: base_link y dar click en Motion Planning
 
 ## MOVIMIENTOS predefinidos YAREN en Rviz:
 
